@@ -1,0 +1,94 @@
+{
+  "entities": {
+    "playlist": {
+      "title": "Playlist",
+      "description": "Saved IPTV playlist record",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique playlist identifier"
+        },
+        "name": {
+          "type": "string",
+          "description": "Display name of the playlist"
+        },
+        "url": {
+          "type": "string",
+          "description": "M3U / M3U8 source URL"
+        },
+        "channelCount": {
+          "type": "number",
+          "description": "Number of parsed channels"
+        },
+        "lastUpdated": {
+          "type": "number",
+          "description": "Epoch timestamp of last sync"
+        }
+      },
+      "required": ["id", "name", "channelCount"]
+    },
+    "settings": {
+      "title": "Settings",
+      "description": "Application preferences and configuration",
+      "type": "object",
+      "properties": {
+        "language": {
+          "type": "string",
+          "enum": ["bn", "en"]
+        },
+        "autoplay": {
+          "type": "boolean"
+        },
+        "aspectRatio": {
+          "type": "string",
+          "enum": ["FIT", "FILL", "ZOOM"]
+        },
+        "autoBypassInactive": {
+          "type": "boolean"
+        },
+        "updatedAt": {
+          "type": "number"
+        }
+      },
+      "required": ["language", "autoBypassInactive"]
+    },
+    "favorite": {
+      "title": "Favorite",
+      "description": "User starred channel",
+      "type": "object",
+      "properties": {
+        "channelId": {
+          "type": "string"
+        },
+        "channelNumber": {
+          "type": "number"
+        },
+        "channelName": {
+          "type": "string"
+        },
+        "groupName": {
+          "type": "string"
+        },
+        "addedAt": {
+          "type": "number"
+        }
+      },
+      "required": ["channelId", "channelName"]
+    }
+  },
+  "firestore": {
+    "/users/{userId}/playlists/{playlistId}": {
+      "schema": "playlist",
+      "description": "User saved IPTV playlists"
+    },
+    "/users/{userId}/settings/{settingId}": {
+      "schema": "settings",
+      "description": "User application preferences"
+    },
+    "/users/{userId}/favorites/{channelId}": {
+      "schema": "favorite",
+      "description": "User favorite channels"
+    }
+  }
+}

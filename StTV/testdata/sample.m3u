@@ -1,0 +1,6 @@
+#EXTM3U
+#EXTINF:-1 tvg-id="BTV.bd" tvg-name="BTV" tvg-logo="https://images.unsplash.com/photo-1598899134739-24c46f58b8c0?w=100&h=100&fit=crop&q=80" group-title="Bangla National",BTV National (বিটিভি)
+https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8
+
+#EXTINF:-1 tvg-id="Somoy.bd" tvg-name="Somoy TV" tvg-logo="https://images.unsplash.com/photo-1585829365295-ab7cd400c167?w=100&h=100&fit=crop&q=80" group-title="Bangla News",Somoy TV (সময় টিভি)
+https://cph-p2p-msl.akamaized.net/hls/live/2000341/test/master.m3u8

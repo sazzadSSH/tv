@@ -1,0 +1,6 @@
+{
+  "name": "StTV — Android TV IPTV & Remote Suite",
+  "description": "Production-ready Android TV IPTV application with Media3 ExoPlayer, D-pad navigation, Telegram bot remote control, channel health monitoring, and Firebase synchronization.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
